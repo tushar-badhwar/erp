@@ -97,7 +97,7 @@ def check_distribution_compatibility():
 def get_distribution_info():
 	# return distribution name and major version
 	if platform.system() == "Linux":
-		current_dist = ['Ubuntu', “22.04”]
+		current_dist = ['Ubuntu', '22.04']
 		return current_dist[0].lower(), current_dist[1].rsplit('.')[0]
 
 	elif platform.system() == "Darwin":
