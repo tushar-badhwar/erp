@@ -78,7 +78,7 @@ def check_distribution_compatibility():
 	dist_name, dist_version = get_distribution_info()
 	supported_dists = {
 		'macos': [10.9, 10.10, 10.11, 10.12],
-		'ubuntu': [14, 15, 16, 18, 19],
+		'ubuntu': [14, 15, 16, 18, 19,22],
 		'debian': [8, 9],
 		'centos': [7]
 	}
@@ -97,7 +97,7 @@ def check_distribution_compatibility():
 def get_distribution_info():
 	# return distribution name and major version
 	if platform.system() == "Linux":
-		current_dist = platform.dist()
+		current_dist = [“Ubuntu”, “22.04”]
 		return current_dist[0].lower(), current_dist[1].rsplit('.')[0]
 
 	elif platform.system() == "Darwin":
